@@ -32,18 +32,6 @@ def main(output_dir='data'):
         urlretrieve(url, filename=output_file)
         print("=> File saved as {}".format(output_file))
 
-    # copy awards data to submission file
-    if os.path.exists(os.path.join('submissions', 'starting_kit')):
-        copyfile(
-            os.path.join('data', DATA[0]),
-            os.path.join('submissions', 'starting_kit',
-                        DATA[0])
-        )
 
-#if __name__ == '__main__':
-#    test = os.getenv('RAMP_TEST_MODE', 0)
-
-#    if test:
-#        print("Testing mode, not downloading any data.")
-#    else:
-#        main()
+if __name__ == '__main__':
+    main()
